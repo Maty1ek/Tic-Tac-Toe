@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="main_container">
+        <div class="main_title">
+            <h1 class="game_title">Tic-Tac-Toe</h1>
+        </div>
+
+        <!-- <div class="hame_page">
+
+        </div> -->
+
+        <div class="home_and_restart">
+            <div class="back_home_button h_n_m"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+            <div class="restart_button h_n_m"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        </div>
+        <div class="game_page none">
+            <div class="player_1 player_con">
+                <h1>Player 1</h1>
+                <p id="player1Score">0</p>
+            </div>
+            <div class="round_amount_con">
+                <div class="round_amount">
+                    <h1 class="rounds_title">Rounds left</h1>
+                    <p class="rounds_count" id="roundsCount"></p>
+                </div>
+            </div>
+            <div class="game_board_con">
+                <div class="tie_window none" id="tieWindow">
+                    <h1 class="tie_title">It's a Tie!</h1>
+                    <button type="button" id="tieButton" class="tie_button">Play Again</button>
+                </div>
+                <div class="game_board" id="gameBoard">
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                    <div class="game_board_square"></div>
+                </div>
+            </div>
+            <div class="player_2 player_con">
+                <h1>Player 2</h1>
+                <p id="player2Score">0</p>
+            </div>
+        </div>
+
+        <div class="result_page">
+            
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7ac26661e5.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
