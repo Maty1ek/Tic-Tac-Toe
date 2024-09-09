@@ -22,11 +22,11 @@
 
         </div> -->
 
-        <div class="home_and_restart">
-            <div class="back_home_button h_n_m"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
-            <div class="restart_button h_n_m"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div class="home_and_restart" id="h_n_m_btns">
+            <div id="backHomeBtn" class="back_home_button h_n_m"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+            <div id="restartGameBtn" class="restart_button h_n_m"><i class="fa-solid fa-arrow-rotate-left"></i></div>
         </div>
-        <div class="game_page none">
+        <div id="gamePage" class="game_page ">
             <div class="player_1 player_con">
                 <h1>Player 1</h1>
                 <p id="player1Score">0</p>
@@ -60,8 +60,14 @@
             </div>
         </div>
 
-        <div class="result_page">
-            
+        <div id="resultPage" class="result_page none">
+            <h1 class='result_title' id="resulTitle"></h1>
+            <h2 class="result_score_text">Score:</h2>
+            <p id="resultScore">0 / 0</p>
+            <div class="result_buttons">
+                <button type="button" id="resultHome">Home</button>
+                <button type="button" id="resultRestart">Play again</button>
+            </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/7ac26661e5.js" crossorigin="anonymous"></script>
