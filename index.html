@@ -18,23 +18,42 @@
             <h1 class="game_title">Tic-Tac-Toe</h1>
         </div>
 
-        <!-- <div class="hame_page">
+        <div id="homePage" class="home_page">
+            <div class="player_type_selection">
+                <div id="playerVsPlayer" class="player_vs_player player_type">
+                    <h1>Player</h1>
+                    <p>vs</p>
+                    <h1>Player</h1>
+                </div>
+                <div id="playerVsComp" class="player_vs_computer player_type">
+                    <h1>Player</h1>
+                    <p>vs</p>
+                    <h1>Computer</h1>
+                </div>
+            </div>
+            <form id="homeForm" method="post">
+                <div class="rounds_amount_input">
+                    <label class="rounds_amount_text" for="amounOfRounds">Amount of rounds:</label>
+                    <input type="number" class="rounds_input" name="amounOfRounds" id="homeInput" required>
+                </div>
+                
+                <button type="submit" class="general_button_style">Play</button>
+            </form>
+        </div>
 
-        </div> -->
-
-        <div class="home_and_restart" id="h_n_m_btns">
+        <div class="home_and_restart none" id="homeRestartCon">
             <div id="backHomeBtn" class="back_home_button h_n_m"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
             <div id="restartGameBtn" class="restart_button h_n_m"><i class="fa-solid fa-arrow-rotate-left"></i></div>
         </div>
-        <div id="gamePage" class="game_page ">
+        <div id="gamePage" class="game_page none">
             <div class="player_1 player_con">
-                <h1>Player 1</h1>
+                <h1 id="fstPlayerName">Player 1</h1>
                 <p id="player1Score">0</p>
             </div>
             <div class="round_amount_con">
                 <div class="round_amount">
                     <h1 class="rounds_title">Rounds left</h1>
-                    <p class="rounds_count" id="roundsCount"></p>
+                    <p class="rounds_count" ><span id="roundsCount">0</span> / <span id="gameRounds">0</span></p>
                 </div>
             </div>
             <div class="game_board_con">
@@ -55,7 +74,7 @@
                 </div>
             </div>
             <div class="player_2 player_con">
-                <h1>Player 2</h1>
+                <h1 id="sndPlayerName">Player 2</h1>
                 <p id="player2Score">0</p>
             </div>
         </div>
@@ -65,8 +84,8 @@
             <h2 class="result_score_text">Score:</h2>
             <p id="resultScore">0 / 0</p>
             <div class="result_buttons">
-                <button type="button" id="resultHome">Home</button>
-                <button type="button" id="resultRestart">Play again</button>
+                <button type="button" id="resultHome" class="general_button_style">Home</button>
+                <button type="button" id="resultRestart" class="general_button_style">Play again</button>
             </div>
         </div>
     </div>

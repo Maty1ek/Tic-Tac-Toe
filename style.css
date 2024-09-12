@@ -1,9 +1,21 @@
 @import url('reset.css');
 
 :root {
-    --blur: blur(5px);
-    --glass-background: rgba(255, 255, 255, 0.05);
-    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    --blur: blur(4px);
+    --glass-background: rgba(255, 255, 255, 0.07);
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* For Webkit browsers like Chrome, Safari */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 body {
@@ -264,8 +276,7 @@ body {
     align-items: center;
 }
 
-#resultHome,
-#resultRestart {
+.general_button_style {
     background-color: #fff;
     outline: 0;
     border: 0;
@@ -277,13 +288,7 @@ body {
     transition: .3s;
 }
 
-#resultRestart {
-    width: 190px;
-    height: 55px;
-}
-
-#resultRestart:hover,
-#resultHome:hover {
+.general_button_style:hover {
     width: 200px;    
     height: 60px;
     font-size: 32px;
@@ -291,8 +296,7 @@ body {
     box-shadow: 0px 0px 28px -8px rgba(255,255,255,0.66);
 }
 
-#resultRestart:active,
-#resultHome:active {
+.general_button_style:active {
     width: 190px;
     height: 55px;
     font-size: 30px;
@@ -300,6 +304,98 @@ body {
     box-shadow: none;
 }
 
+
+.home_page {
+    width: 1000px;
+    height: 530px;
+    margin-top: -10px;
+    background-color: var(--glass-background);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--blur);
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Roboto';  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 40px 0;
+}
+
+.player_type_selection {
+    display: grid;
+    width: 800px;
+    /* justify-content: center; */
+    align-items: center;
+    height: 250px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.player_type {
+    width: 330px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffff1b;
+    backdrop-filter: blur(10px);
+    transition: .3s;
+    justify-self: center;
+    
+    h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }   
+    
+    p {
+        font-size: 30px;
+    }
+}
+
+.player_type:hover {
+    width: 350px;
+    height: 220px;
+}
+
+.player_type:active {
+    width: 330px;
+    height: 200px;
+}
+
+.rounds_input {
+    padding: 10px 15px;
+    width: 220px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.rounds_amount_text {
+    font-size: 22px;
+    color: #ffffffd2;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.rounds_amount_input {
+    display: flex;
+    flex-direction: column;
+}
+
+#homeForm {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .none {
     display: none;
 }
+
