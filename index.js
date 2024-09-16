@@ -41,9 +41,9 @@ const oMark = '<i class="fa-regular fa-circle oMark gameMarks"></i>'
 
 // game board as an array of strings
 const virtualGameBoard = [
-    'o', '', '',
-    '', 'o', '',
-    '', 'o', ''
+    '', '', '',
+    '', '', '',
+    '', '', ''
 ]
 
 // all the winning combinations in the game
