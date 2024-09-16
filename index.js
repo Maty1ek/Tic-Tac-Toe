@@ -185,6 +185,7 @@ function restartOrHome(isGameBtn, isGoHome) {
         homeInput.value = '';
         isHomeClicked = true;
         gameResultToggle()
+        computerGame = false
     }
 }
 
