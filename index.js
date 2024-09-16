@@ -41,9 +41,9 @@ const oMark = '<i class="fa-regular fa-circle oMark gameMarks"></i>'
 
 // game board as an array of strings
 const virtualGameBoard = [
-    '', '', '',
-    '', '', '',
-    '', '', ''
+    'o', '', '',
+    '', 'o', '',
+    '', 'o', ''
 ]
 
 // all the winning combinations in the game
@@ -130,23 +130,6 @@ for (let i = 0; i < gameSquares.length; i++) {
     })
 }
 
-function restartOrHome(isGameBtn, isGoHome) {
-    // isGameBtn checks if it is a restart/home btn from the game page
-    // isGoHome checks if it is an event to get back to the home page
-    if (isGameBtn) {
-        if (isItTie) {
-            tieToggle(false)
-        }
-        clearPLayerResults();
-        clearGameBoard()
-    }
-    if (isGoHome) {
-        homeInput.value = '';
-        isHomeClicked = true;
-        gameResultToggle()
-    }
-}
-
 // function to get the data from the game page and count the rounds
 function gameDataFunc(gameRounds) {
     let roundCount = 0
@@ -186,6 +169,23 @@ function startGame(e) {
         sndPlayerName.innerHTML = player2name
     }
     gameResultToggle()
+}
+
+function restartOrHome(isGameBtn, isGoHome) {
+    // isGameBtn checks if it is a restart/home btn from the game page
+    // isGoHome checks if it is an event to get back to the home page
+    if (isGameBtn) {
+        if (isItTie) {
+            tieToggle(false)
+        }
+        clearPLayerResults();
+        clearGameBoard()
+    }
+    if (isGoHome) {
+        homeInput.value = '';
+        isHomeClicked = true;
+        gameResultToggle()
+    }
 }
 
 // function to set the player's mark in the virtual game board
@@ -288,6 +288,6 @@ function checkTheWInner(index) {
                 clearGameBoard()
                 break
             }
-        }
+        }        
     }
 }
